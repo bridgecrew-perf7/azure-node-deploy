@@ -4,12 +4,17 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "pm2": "^5.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "stop": "pm2 kill",
+    "start": "pm2 start index.js --watch --log /var/log/pm2.log",
+    "list": "pm2 list",
+    "restart": "pm2 restart index.js",
     "dev": "nodemon server.js"
   },
   "author": "",
