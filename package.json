@@ -12,9 +12,9 @@
   },
   "scripts": {
     "stop": "pm2 kill",
-    "start": "pm2 start index.js --watch --log /var/log/pm2.log",
+    "start": "pm2 start server.js",
     "list": "pm2 list",
-    "restart": "pm2 restart index.js",
+    "restart": "pm2 restart server.js",
     "dev": "nodemon server.js"
   },
   "author": "",
